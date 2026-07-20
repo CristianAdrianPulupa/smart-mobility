@@ -76,7 +76,7 @@ pip install -r requirements.txt
 Crear el archivo `.env`:
 
 ```env
-GoogleMaps_API_KEY=TU_API_KEY
+GoogleMaps_API_KEY=********************
 ```
 
 Ejecutar la aplicación:
