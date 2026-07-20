@@ -23,6 +23,7 @@ Smart Mobility es un sistema web desarrollado en Python y Flask que permite opti
 - Leaflet
 - OpenStreetMap
 - OpenRouteService
+-Google Maps API 
 
 ## Estructura del proyecto
 
@@ -75,7 +76,7 @@ pip install -r requirements.txt
 Crear el archivo `.env`:
 
 ```env
-OPENROUTESERVICE_API_KEY=TU_API_KEY
+GoogleMaps_API_KEY=TU_API_KEY
 ```
 
 Ejecutar la aplicación:
