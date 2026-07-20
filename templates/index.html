@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Smart Mobility</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Plataforma logística</p>
+
+            <h1>Smart Mobility</h1>
+
+            <p class="subtitle">
+                Optimización inteligente de rutas de entrega
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Planificar ruta</h2>
+
+            <form id="route-form">
+                <div class="field-group">
+                    <label for="origin">
+                        Punto de origen
+                    </label>
+
+                    <input
+                        id="origin"
+                        name="origin"
+                        type="text"
+                        placeholder="Ejemplo: Universidad Central del Ecuador"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+
+                <div id="destinations-container">
+                    <div class="field-group destination-group">
+                        <label for="destination-1">
+                            Destino 1
+                        </label>
+
+                        <input
+                            id="destination-1"
+                            class="destination-input"
+                            type="text"
+                            placeholder="Ingrese una dirección"
+                            autocomplete="off"
+                            required
+                        >
+                    </div>
+
+                    <div class="field-group destination-group">
+                        <label for="destination-2">
+                            Destino 2
+                        </label>
+
+                        <input
+                            id="destination-2"
+                            class="destination-input"
+                            type="text"
+                            placeholder="Ingrese una dirección"
+                            autocomplete="off"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button
+                        id="add-destination"
+                        class="button button-secondary"
+                        type="button"
+                    >
+                        + Agregar destino
+                    </button>
+
+                    <button
+                        id="optimize-route"
+                        class="button button-primary"
+                        type="submit"
+                    >
+                        Optimizar ruta
+                    </button>
+                </div>
+            </form>
+
+            <p
+                id="message"
+                class="message hidden"
+            ></p>
+        </section>
+
+        <section
+            id="results"
+            class="card hidden"
+        >
+            <div class="results-header">
+                <div>
+                    <p class="eyebrow">Resultado</p>
+                    <h2>Ruta optimizada</h2>
+                </div>
+            </div>
+
+            <div class="metrics">
+                <article class="metric">
+                    <span class="metric-label">
+                        Distancia total
+                    </span>
+
+                    <strong id="total-distance">
+                        0 km
+                    </strong>
+                </article>
+
+                <article class="metric">
+                    <span class="metric-label">
+                        Tiempo estimado
+                    </span>
+
+                    <strong id="total-duration">
+                        0 min
+                    </strong>
+                </article>
+            </div>
+
+            <div class="route-section">
+                <h3>Orden recomendado</h3>
+
+                <ol id="route-order"></ol>
+            </div>
+        </section>
+
+        <section
+            id="map-section"
+            class="card hidden"
+        >
+            <h2>Mapa de la ruta</h2>
+
+            <div id="map">
+                El mapa aparecerá aquí.
+            </div>
+        </section>
+    </main>
+
+        <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+</body>
+</html>
