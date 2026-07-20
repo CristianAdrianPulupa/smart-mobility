@@ -44,7 +44,7 @@ smart-mobility/
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/TU_USUARIO/smart-mobility.git
+git clone https://github.com/CristianAdrianPulupa/smart-mobility.git
 ```
 
 Ingresar al proyecto:
